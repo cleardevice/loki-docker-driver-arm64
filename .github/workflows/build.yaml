@@ -1,4 +1,4 @@
-name: Build and push Loki Docker plugin
+name: Build and push
 
 on:
   workflow_dispatch:
