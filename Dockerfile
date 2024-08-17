@@ -1,4 +1,4 @@
-FROM golang:1.23-alpine as builder
+FROM golang:1.23-alpine AS builder
 
 RUN apk add git
 RUN git clone https://github.com/grafana/loki.git
