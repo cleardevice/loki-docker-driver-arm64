@@ -5,7 +5,8 @@ RUN git clone https://github.com/grafana/loki.git
 
 WORKDIR /go/loki
 
-ENV LOKI_DRIVER_VERSION=v3.1.1
+ARG LOKI_DRIVER_VERSION
+ENV LOKI_DRIVER_VERSION=v${LOKI_DRIVER_VERSION}
 RUN git checkout $LOKI_DRIVER_VERSION
 RUN go get github.com/grafana/pyroscope-go
 RUN go mod vendor
